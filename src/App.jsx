@@ -2,7 +2,7 @@ import Header from "./Header";
 import Hero from "./HomePage/hero section/Hero";
 import ServicesSection from "./HomePage/cardServices/Service";
 import WhyChooseUS from "./HomePage/Decision/WhyChooseUs";
-import Portfolio from "./HomePage/portfolio/portfolio";
+import Portfolio from "./HomePage/portfolio/Portfolio";
 import Testimonial from "./HomePage/Testimnials/Testmonial";
 import CardSlider from "./HomePage/Team/CardSlider";
 import Footer from "./Footer"
