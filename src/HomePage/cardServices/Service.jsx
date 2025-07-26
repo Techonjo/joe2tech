@@ -1,9 +1,9 @@
 import Card from "./Card";
 import "./card.css"; // External CSS
-import cardImage1 from "./assets/repairicon.png";
+import cardImage1 from "../../assets/repairicon.png";
 import cardImage2 from "./assets/webicon.png";
-import cardImage3 from "./assets/ictconsult.png";
-import cardImage4 from "./assets/graphicicon.png";
+import cardImage3 from "../../assets/ictconsult.png";
+import cardImage4 from "../../assets/graphicicon.png";
 
 const services = [
   {

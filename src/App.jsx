@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Hero from "./HomePage/hero section/Hero";
+import Hero from "./HomePage/herosection/Hero";
 import ServicesSection from "./HomePage/cardServices/Service";
 import WhyChooseUS from "./HomePage/Decision/WhyChooseUs";
 import Portfolio from "./HomePage/portfolio/Portfolio";
