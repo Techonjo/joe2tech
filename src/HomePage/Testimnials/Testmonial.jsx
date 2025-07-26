@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "../../Testimonial.css"; // External CSS
+import "./Testimonial.css"; // External CSS
 
 const testimonies = [
   {
