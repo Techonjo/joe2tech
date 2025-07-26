@@ -1,4 +1,5 @@
 import "./WhyChooseUs.css";
+import imageWrapper from "./assets/bac2.jpg"
 
 function WhyChooseUs() {
   return (
@@ -11,7 +12,7 @@ function WhyChooseUs() {
         </p>
         <div className="image-wrapper">
           <img
-            src="./src/assets/bac2.jpg"
+            src= {imageWrapper}
             alt="Business meeting"
             className="why-image"
           />

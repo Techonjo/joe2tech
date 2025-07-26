@@ -1,11 +1,14 @@
 import "./portfolio.css";
+import image1 from "./assets/web.png";
+import image2 from "./assets/darshboard.webp";
+import image3 from "./assets/web.png";
 
 const portfolioItems = [
   {
     id: 1,
     title: "SKYDASH",
     description: "Redesigning the dashboard of SkyDash to improve usability.",
-    image: "./src/assets/web.png", // Make sure this path is correct
+    image: image1, 
     link: "https://josephonoja.netlify.app/",
   },
   {
@@ -13,14 +16,14 @@ const portfolioItems = [
     title: "PROJECT B",
     description:
       "A modern responsive website redesign for better user experience.",
-    image: "./src/assets/darshboard.webp",
+    image: image2,
     link: "/portfolio/project-b",
   },
   {
     id: 3,
     title: "PROJECT C",
     description: "Building a new e-commerce UI/UX experience.",
-    image: "./src/assets/web.png",
+    image: image3,
     link: "https://josephonoja.netlify.app/",
   },
 ];

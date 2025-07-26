@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./hero.css";
+import bac1 from "./assets/bac1.jpg";
+import bac2 from "./assets/bac2.jpg";
+import bac3 from "./assets/bac3.jpg";
 
-const images = [
-  "./src/assets/bac1.jpg",
-  "./src/assets/bac2.jpg",
-  "./src/assets/bac3.jpg",
-];
+const images = [bac1, bac2, bac3];
 
 function Hero() {
   const [current, setCurrent] = useState(0);

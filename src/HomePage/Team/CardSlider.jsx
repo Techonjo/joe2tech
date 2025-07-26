@@ -1,31 +1,37 @@
 import React, { useEffect, useRef } from "react";
 import "./CardSlider.css";
+import joeImage from "./assets/joseph.jpg";
+import amehImage from "./assets/oche.jpg";
+import piuImage from "./assets/pius.jpg";
+import katmiImage from "./assets/katmit.png";
+import abdulImage from "./assets/abdul.jpg";
+
 
 const teamMembers = [
   {
     name: "Onoja Joseph",
     role: "Front End Developer & IT Consultant",
-    image: "./src/assets/joseph.jpg",
+    image: joeImage,
   },
   {
     name: "Joe Ameh",
     role: "Computer engineering, web development, videography, IT Specialist",
-    image: "./src/assets/oche.jpg",
+    image: amehImage,
   },
   {
     name: "Davou Pius Gyang",
     role: "Graphics Designer, Phography & UI/UX",
-    image: "./src/assets/pius.jpg",
+    image: piuImage,
   },
   {
     name: "Albert Katmi",
     role: "Project Manager & Data Analysis",
-    image: "./src/assets/katmit.png",
+    image: katmiImage,
   },
   {
     name: "Abdul Muqueet",
     role: "Mobile App & Web developer",
-    image: "./src/assets/abdul.jpg",
+    image: abdulImage,
   },
 ];
 

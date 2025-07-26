@@ -1,26 +1,30 @@
 import Card from "./Card";
 import "./card.css"; // External CSS
+import cardImage1 from "./assets/repairicon.png";
+import cardImage2 from "./assets/webicon.png";
+import cardImage3 from "./assets/ictconsult.png";
+import cardImage4 from "./assets/graphicicon.png";
 
 const services = [
   {
-    image: "./src/assets/repairicon.png",
+    image: cardImage1,
     title: "Computer Repairs & Maintenance",
     tagline:
       "From quick fixes to advanced repairs, we keep your devices running smoothly.",
   },
   {
-    image: "./src/assets/webicon.png",
+    image: cardImage2,
     title: "Website Design & Development",
     tagline:
       "We create responsive, modern, and user-friendly websites tailored to your goals.",
   },
   {
-    image: "./src/assets/ictconsult.png",
+    image: cardImage3,
     title: "ICT Consulting & Training",
     tagline: "Get expert advice on technology strategies that drive results.",
   },
   {
-    image: "./src/assets/graphicicon.png",
+    image: cardImage4,
     title: "Graphic Design & Branding",
     tagline:
       "We design stunning graphics and branding solutions that make your business stand out.",
