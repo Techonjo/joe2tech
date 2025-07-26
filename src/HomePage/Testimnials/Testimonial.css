@@ -1,0 +1,68 @@
+.testimony-background {
+    background: #0f172a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.testimony-text {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.testimony-title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.testimony-subtitle {
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+button {
+    border: none;
+    background: #22c55e;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Cards in a row */
+.testimony-container {
+    display: flex;              
+    gap: 20px;                   
+    overflow-x: auto;            
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    background: #0f172a;
+    border-radius: 10px;
+    scrollbar-width: none;       
+}
+
+.testimony-container::-webkit-scrollbar {
+    display: none;               
+}
+
+/* Card styling */
+.testimony-card {
+    min-width: 300px;           
+    flex: 0 0 auto;              
+    background: #193952;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimony-card:hover {
+    transform: translateY(-5px); 
+}

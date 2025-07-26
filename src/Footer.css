@@ -1,0 +1,154 @@
+.footer {
+  background-color: #0F172A;
+  color: #CBD5E1;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Top Section */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Quick Links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #CBD5E1;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #22C55E;
+}
+
+/* Contact Info */
+.footer-contact p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.footer-contact a {
+  color: #CBD5E1;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #22C55E;
+}
+
+/* Social Icons */
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color: #FFFFFF;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #22C55E;
+}
+
+/* Contact Form */
+.footer-form h3 {
+  margin-bottom: 10px;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent; /* Transparent background */
+  color: #FFFFFF;
+  outline: none;
+  resize: none;
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  color: #94A3B8;
+}
+
+.footer-form button {
+  padding: 10px;
+  background: #22C55E;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footer-form button:hover {
+  background: #16A34A;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  border-top: 1px solid #1E293B;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social .social-icons {
+    justify-content: center;
+  }
+
+  .footer-form form {
+    align-items: center;
+  }
+
+  .footer-form input,
+  .footer-form textarea,
+  .footer-form button {
+    max-width: 100%;
+  }
+}
