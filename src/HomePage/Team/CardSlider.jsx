@@ -6,7 +6,6 @@ import piuImage from "../../assets/pius.jpg";
 import katmiImage from "../../assets/katmit.png";
 import abdulImage from "../../assets/abdul.jpg";
 
-
 const teamMembers = [
   {
     name: "Onoja Joseph",
@@ -20,7 +19,7 @@ const teamMembers = [
   },
   {
     name: "Davou Pius Gyang",
-    role: "Graphics Designer, Phography & UI/UX",
+    role: "Graphics Designer, Photography & UI/UX",
     image: piuImage,
   },
   {
@@ -37,7 +36,6 @@ const teamMembers = [
 
 function CardSlider() {
   const containerRef = useRef(null);
-
   const scrollByAmount = 300; // how much to scroll per click
 
   const scrollLeft = () => {
@@ -53,20 +51,17 @@ function CardSlider() {
 
   useEffect(() => {
     const container = containerRef.current;
-    let scrollAmount = 0;
+    if (!container) return;
 
     const autoScroll = setInterval(() => {
-      if (!container) return;
-
-      scrollAmount += 1;
-      if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-        scrollAmount = 0;
+      if (
+        container.scrollLeft + container.clientWidth >=
+        container.scrollWidth
+      ) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: 1, behavior: "smooth" });
       }
-
-      container.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
     }, 30);
 
     return () => clearInterval(autoScroll);
@@ -81,7 +76,7 @@ function CardSlider() {
         </button>
 
         <div className="team-container" ref={containerRef}>
-          {[...teamMembers, ...teamMembers].map((member, index) => (
+          {teamMembers.map((member, index) => (
             <div className="team-card" key={index}>
               <img
                 src={member.image}
