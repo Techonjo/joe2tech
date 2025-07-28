@@ -1,5 +1,5 @@
 import "./WhyChooseUs.css";
-import imageWrapper from "../../assets/bac2.jpg"
+import imageWrapper from "../../../assets/bac2.jpg"
 
 function WhyChooseUs() {
   return (

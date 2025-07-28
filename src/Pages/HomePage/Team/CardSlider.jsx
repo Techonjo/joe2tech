@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./CardSlider.css";
-import joeImage from "../../assets/joseph.jpg";
-import amehImage from "../../assets/oche.jpg";
-import piuImage from "../../assets/pius.jpg";
-import katmiImage from "../../assets/katmit.png";
-import abdulImage from "../../assets/abdul.jpg";
+import joeImage from "../../../assets/joseph.jpg";
+import amehImage from "../../../assets/oche.jpg";
+import piuImage from "../../../assets/pius.jpg";
+import katmiImage from "../../../assets/katmit.png";
+import abdulImage from "../../../assets/abdul.jpg";
 
 const teamMembers = [
   {

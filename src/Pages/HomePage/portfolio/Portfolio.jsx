@@ -1,7 +1,7 @@
 import "./portfolio.css";
-import image1 from "../../assets/web.png";
-import image2 from "../../assets/darshboard.webp";
-import image3 from "../../assets/web.png";
+import image1 from "../../../assets/web.png";
+import image2 from "../../../assets/darshboard.webp";
+import image3 from "../../../assets/web.png";
 
 const portfolioItems = [
   {
