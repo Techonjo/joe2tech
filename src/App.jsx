@@ -11,7 +11,7 @@ import About from "./AboutUs/AboutUs"; // Import About page
 
 function App() {
   return (
-    <Router basename="/joe2tech">
+    <Router>
       {/* Header will show on all pages */}
       <Header />
       <Routes>
