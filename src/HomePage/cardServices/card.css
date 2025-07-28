@@ -11,7 +11,7 @@
 }
 
 .service-description {
-  font-size: 1em;
+  font-size: 0.9em;
   margin: 10px 0;
   color: #0f172a;
   font-weight: bold;
@@ -28,7 +28,7 @@
 
 .card {
   justify-content: center;
-  background-color: rgb(176, 168, 168);
+  background-color: #193952;
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
