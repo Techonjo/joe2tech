@@ -12,7 +12,7 @@
 
 .testimony-title {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -28,41 +28,111 @@ button {
     border: none;
     background: #22c55e;
     margin: 10px;
-    padding: 10px;
+    padding: 10px 16px;
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
 }
 
+button:hover {
+    background: #16a34a;
+}
 
-/* Cards in a row */
+/* Cards container */
 .testimony-container {
-    display: flex;              
-    gap: 20px;                   
-    overflow-x: auto;            
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 0;
     background: #0f172a;
     border-radius: 10px;
-    scrollbar-width: none;       
+    scrollbar-width: none;  /* Firefox */
 }
 
 .testimony-container::-webkit-scrollbar {
-    display: none;               
+    display: none;  /* Chrome, Safari */
 }
 
-/* Card styling */
+/* Testimony card styling */
 .testimony-card {
-    min-width: 300px;           
-    flex: 0 0 auto;              
+    min-width: 300px;
+    max-width: 320px;
+    flex: 0 0 auto;
     background: #193952;
-    color: #000;
+    color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    text-align: left;
 }
 
 .testimony-card:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+
+/* Tablets and smaller screens */
+@media (max-width: 1024px) {
+    .testimony-background {
+        padding: 20px 30px;
+    }
+    .testimony-title {
+        font-size: 1.5rem;
+    }
+    .testimony-subtitle {
+        font-size: 0.95rem;
+    }
+    .testimony-card {
+        min-width: 260px;
+        padding: 15px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .testimony-background {
+        padding: 15px 20px;
+    }
+    .testimony-title {
+        font-size: 1.4rem;
+    }
+    .testimony-subtitle {
+        font-size: 0.9rem;
+    }
+    .testimony-container {
+        gap: 15px;
+    }
+    .testimony-card {
+        min-width: 220px;
+        padding: 15px;
+    }
+}
+
+/* Small mobile (under 480px) */
+@media (max-width: 480px) {
+    .testimony-background {
+        padding: 10px 15px;
+    }
+    .testimony-title {
+        font-size: 1.2rem;
+    }
+    .testimony-subtitle {
+        font-size: 0.85rem;
+    }
+    .testimony-container {
+        gap: 10px;
+    }
+    .testimony-card {
+        min-width: 180px;
+        padding: 10px;
+    }
+    button {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
 }
