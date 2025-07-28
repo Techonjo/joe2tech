@@ -37,12 +37,11 @@ const teamMembers = [
 function CardSlider() {
   const containerRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const [activeCard, setActiveCard] = useState(null);
 
   const scrollByAmount = 300;
 
-  const scrollLeftFunc = () => {
+  const scrollLeft = () => {
     setIsPaused(true);
     containerRef.current.scrollBy({
       left: -scrollByAmount,
@@ -50,15 +49,15 @@ function CardSlider() {
     });
   };
 
-  const scrollRightFunc = () => {
+  const scrollRight = () => {
     setIsPaused(true);
     containerRef.current.scrollBy({ left: scrollByAmount, behavior: "smooth" });
   };
 
-  // Auto-scroll logic
+  // Auto-scroll
   useEffect(() => {
     const container = containerRef.current;
-    let scrollSpeed = 0.5; // pixels per frame
+    let scrollSpeed = 0.5;
     let animationFrameId;
 
     const autoScroll = () => {
@@ -79,23 +78,8 @@ function CardSlider() {
     return () => cancelAnimationFrame(animationFrameId);
   }, [isPaused]);
 
-  // Swipe/Touch support
-  const handleTouchStart = (e) => {
-    setIsPaused(true);
-    setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!startX) return;
-    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // multiplier for faster scroll
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => {
-    setStartX(0);
-    setTimeout(() => setIsPaused(false), 1500); // resume auto-scroll after delay
+  const toggleRole = (index) => {
+    setActiveCard(activeCard === index ? null : index);
   };
 
   return (
@@ -106,33 +90,35 @@ function CardSlider() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <button className="carousel-btn prev-btn" onClick={scrollLeftFunc}>
+        <button className="carousel-btn prev-btn" onClick={scrollLeft}>
           &#10094;
         </button>
 
-        <div
-          className="team-container"
-          ref={containerRef}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
+        <div className="team-container" ref={containerRef}>
           {teamMembers.map((member, index) => (
-            <div className="team-card" key={index}>
+            <div
+              className={`team-card ${activeCard === index ? "active" : ""}`}
+              key={index}
+              onClick={() => toggleRole(index)}
+            >
               <img
                 src={member.image}
                 alt={member.name}
                 className="team-image"
               />
-              <div className="overlay">
+              <div className="name-bar">
                 <h3>{member.name}</h3>
-                <p>{member.role}</p>
               </div>
+              {activeCard === index && (
+                <div className="role-box">
+                  <p>{member.role}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
 
-        <button className="carousel-btn next-btn" onClick={scrollRightFunc}>
+        <button className="carousel-btn next-btn" onClick={scrollRight}>
           &#10095;
         </button>
       </div>
