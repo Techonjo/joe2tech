@@ -42,7 +42,7 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background: #22c55e;
+  background: #22c55e64;
   transition: all 0.3s ease;
   cursor: pointer;
 }
