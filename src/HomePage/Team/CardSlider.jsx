@@ -7,31 +7,11 @@ import katmiImage from "../../assets/katmit.png";
 import abdulImage from "../../assets/abdul.jpg";
 
 const teamMembers = [
-  {
-    name: "Onoja Joseph",
-    role: "Front End Developer & IT Consultant",
-    image: joeImage,
-  },
-  {
-    name: "Joe Ameh",
-    role: "Computer engineering, web development, videography, IT Specialist",
-    image: amehImage,
-  },
-  {
-    name: "Davou Pius Gyang",
-    role: "Graphics Designer, Photography & UI/UX",
-    image: piuImage,
-  },
-  {
-    name: "Albert Katmi",
-    role: "Project Manager & Data Analysis",
-    image: katmiImage,
-  },
-  {
-    name: "Abdul Muqueet",
-    role: "Mobile App & Web developer",
-    image: abdulImage,
-  },
+  { name: "Onoja Joseph", role: "Front End Developer & IT Consultant", image: joeImage },
+  { name: "Joe Ameh", role: "Computer engineering, web development, videography, IT Specialist", image: amehImage },
+  { name: "Davou Pius Gyang", role: "Graphics Designer, Photography & UI/UX", image: piuImage },
+  { name: "Albert Katmi", role: "Project Manager & Data Analysis", image: katmiImage },
+  { name: "Abdul Muqueet", role: "Mobile App & Web developer", image: abdulImage },
 ];
 
 function CardSlider() {
@@ -43,10 +23,7 @@ function CardSlider() {
 
   const scrollLeft = () => {
     setIsPaused(true);
-    containerRef.current.scrollBy({
-      left: -scrollByAmount,
-      behavior: "smooth",
-    });
+    containerRef.current.scrollBy({ left: -scrollByAmount, behavior: "smooth" });
   };
 
   const scrollRight = () => {
@@ -62,10 +39,7 @@ function CardSlider() {
 
     const autoScroll = () => {
       if (!isPaused && container) {
-        if (
-          container.scrollLeft + container.clientWidth >=
-          container.scrollWidth
-        ) {
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
           container.scrollTo({ left: 0 });
         } else {
           container.scrollLeft += scrollSpeed;
@@ -101,11 +75,7 @@ function CardSlider() {
               key={index}
               onClick={() => toggleRole(index)}
             >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="team-image"
-              />
+              <img src={member.image} alt={member.name} className="team-image" />
               <div className="name-bar">
                 <h3>{member.name}</h3>
               </div>
