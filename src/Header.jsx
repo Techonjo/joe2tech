@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "./Header.css"; // External CSS
+import "./Header.css";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false); // Close menu when a link is clicked
   };
 
   return (
@@ -31,19 +35,29 @@ function Header() {
         )}
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={closeMenu}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="">Services</Link>
+            <Link to="" onClick={closeMenu}>
+              Services
+            </Link>
           </li>
           <li>
-            <Link to="">Portfolio</Link>
+            <Link to="" onClick={closeMenu}>
+              Portfolio
+            </Link>
           </li>
           <li>
-            <Link to="">Contact</Link>
+            <Link to="" onClick={closeMenu}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
